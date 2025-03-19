@@ -8,6 +8,7 @@ A modular Python implementation of a disposable email client using mail.tm servi
 - Receive emails in real-time using SSE
 - Extract OTP codes and URLs from emails
 - Simple command-line interface
+- Modern web interface
 - Persistent configuration
 
 ## Installation
@@ -25,12 +26,36 @@ pip install -r requirements.txt
 
 ## Usage
 
-Run the client:
+You can run the client using the `run.py` script:
+
+### Command Line Interface
+
 ```bash
-python src/main.py
+./run.py
+```
+or
+```bash
+python run.py
 ```
 
-### Available Commands
+### Web Interface
+
+```bash
+./run.py --web
+```
+or
+```bash
+python run.py --web
+```
+
+Optional: Specify a custom port (default is 5000):
+```bash
+./run.py --web --port 8080
+```
+
+Then open your browser and navigate to `http://localhost:5000` (or your custom port).
+
+### CLI Commands
 
 - `M` - List all messages
 - `O <id>` - Open and read a specific message
@@ -49,7 +74,13 @@ src/
 │   └── message.py          # Message model
 ├── services/
 │   └── email_service.py    # Main email service
-└── main.py                 # CLI entry point
+├── web/
+│   ├── templates/          # HTML templates
+│   ├── static/             # Static files (CSS, JS)
+│   └── app.py             # Web application
+├── main.py                 # CLI entry point
+└── launcher.py            # Application launcher
+run.py                     # Main entry point script
 ```
 
 ## Configuration

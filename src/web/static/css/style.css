@@ -1,0 +1,33 @@
+/* Custom styles */
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.list-group-item {
+    transition: background-color 0.2s;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#messageContent {
+    min-height: 200px;
+}
+
+.toast {
+    opacity: 1 !important;
+}
+
+.alert {
+    margin-bottom: 0;
+}
+
+.badge {
+    font-size: 0.7em;
+    padding: 0.35em 0.65em;
+} 
